@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Repositorio QGIS · Nivel Inicial — USS</title>
+<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Arial,sans-serif;background:#0f172a;color:#e2e8f0}
+header{background:linear-gradient(135deg,#14532d,#166534 55%,#15803d);padding:34px 22px 26px;text-align:center}
+header h1{font-size:1.7rem;color:#fff}header p{color:#bbf7d0;margin-top:6px;font-size:.95rem}
+.stats{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px}.stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:10px;padding:8px 14px;font-size:.85rem;color:#f0fdf4}
+.toolbar{position:sticky;top:0;background:#0f172aF2;padding:12px 16px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;z-index:5;border-bottom:1px solid #1e293b}
+.toolbar input{flex:1;min-width:180px;padding:9px 12px;border-radius:8px;border:1px solid #334155;background:#1e293b;color:#e2e8f0}
+.chip{padding:8px 12px;border-radius:999px;border:1px solid #334155;background:#1e293b;color:#cbd5e1;cursor:pointer;font-size:.82rem}.chip.active{background:#16a34a;border-color:#16a34a;color:#fff}
+main{max-width:1100px;margin:0 auto;padding:8px 16px 30px}section{margin-top:26px}h2{font-size:1.15rem;color:#4ade80}.catdesc{color:#94a3b8;font-size:.88rem;margin:4px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:7px}
+.fmt{align-self:flex-start;background:#14532d;color:#86efac;font-size:.68rem;font-weight:700;letter-spacing:.06em;padding:3px 8px;border-radius:6px}
+.card h3{font-size:.98rem;color:#f1f5f9}.card p{font-size:.85rem;color:#94a3b8;flex:1}.meta{font-size:.75rem;color:#64748b}
+.btn{text-align:center;background:#16a34a;color:#fff;text-decoration:none;padding:9px;border-radius:8px;font-weight:600;font-size:.88rem}.btn:hover{background:#15803d}
+footer{text-align:center;color:#64748b;font-size:.78rem;padding:22px 16px 30px;line-height:1.5}.hidden{display:none}</style></head>
+<body><header><h1>🛰️ Repositorio de materiales · QGIS – Nivel Inicial</h1>
+<p>Seminario de Actualización Formativa · Escuela Profesional de Arquitectura · Universidad Señor de Sipán<br>Docente: Arq. William Polo Olortiga · Todos trabajan en <b>QGIS 3.44 LTR «Solothurn»</b></p>
+<div class="stats"><span class="stat">📦 24 recursos</span><span class="stat">💾 282 MB en total</span><span class="stat">📍 Lambayeque · Piura · Cajamarca</span><span class="stat">🎯 Zona UTM 17 Sur</span></div></header>
+<div class="toolbar"><input id="q" type="search" placeholder="Buscar material… (ej.: curvas, Piura, estaciones)"><button class="chip active" data-f="all">Todo</button><button class="chip" data-f="cartas">🗺️ Cartas nacionales 1:100 000</button><button class="chip" data-f="curvas">⛰️ Curvas de nivel</button><button class="chip" data-f="estaciones">🌦️ Estaciones meteorológicas</button><button class="chip" data-f="mapas">🧭 Mapas temáticos y planos urbanos</button><button class="chip" data-f="practica">🎯 Datos y documentos de práctica</button></div>
+<main><section id="cartas"><h2>🗺️ Cartas nacionales 1:100 000 — IGN</h2><p class="catdesc">Hojas completas con márgenes para el ejercicio de georreferenciación (Clases 2 y 4). Todas en Zona UTM 17 Sur.</p><div class="grid"><article class="card" data-cat="cartas" data-search="carta nacional chiclayo — hoja 14-d (0957) ejercicio a: georreferenciar con coordenadas geográficas → epsg:4326. marco: −80°00′ a −79°30′ · −7°00′ a −6°30′.">
+      <div class="fmt">PDF</div>
+      <h3>Carta Nacional CHICLAYO — Hoja 14-d (0957)</h3><p>Ejercicio A: georreferenciar con coordenadas geográficas → EPSG:4326. Marco: −80°00′ a −79°30′ · −7°00′ a −6°30′.</p>
+      <div class="meta">1.2 MB · IGN · Serie J631 Ed. 2 (GeoPDF IDEP)</div>
+      <a class="btn" href="georreferenciacion/carta-nacional-chiclayo-14d-1-100000.pdf" download>⬇ Descargar</a></article>
+<article class="card" data-cat="cartas" data-search="carta nacional piura — hoja 11-b (0760) ejercicio b: georreferenciar con coordenadas utm → epsg:32717. marco: −80°30′ a −80°00′ · −5°30′ a −5°00′.">
+      <div class="fmt">PDF</div>
+      <h3>Carta Nacional PIURA — Hoja 11-b (0760)</h3><p>Ejercicio B: georreferenciar con coordenadas UTM → EPSG:32717. Marco: −80°30′ a −80°00′ · −5°30′ a −5°00′.</p>
+      <div class="meta">1.2 MB · IGN · Serie J631 Ed. 2 (GeoPDF IDEP)</div>
+      <a class="btn" href="georreferenciacion/carta-nacional-piura-11b-1-100000.pdf" download>⬇ Descargar</a></article>
+<article class="card" data-cat="cartas" data-search="carta nacional cajamarca — hoja 15-f (1156) hoja de alta resolución (13.7 mb) para los ejercicios gemelos a′ (geográfico) y b′ (utm). marco: −79°00′ a −78°30′ · −7°00′ a −7°30′.">
+      <div class="fmt">PDF</div>
+      <h3>Carta Nacional CAJAMARCA — Hoja 15-f (1156)</h3><p>Hoja de alta resolución (13.7 MB) para los ejercicios gemelos A′ (geográfico) y B′ (UTM). Marco: −79°00′ a −78°30′ · −7°00′ a −7°30′.</p>
+      <div class="meta">13.1 MB · IGN · Serie J632 Ed. 1-NIMA</div>
+      <a class="btn" href="georreferenciacion/carta-nacional-cajamarca-1156-15f-1-100000.pdf" download>⬇ Descargar</a></article>
+</div></section><section id="curvas"><h2>⛰️ Curvas de nivel — Shapefiles IGN</h2><p class="catdesc">Topografía oficial 1:100 000 extraída del geoportal IDEP (servicio ExtractPERU100K), en WGS 84 (EPSG:4326). Recorte por rectángulo envolvente del departamento: en QGIS recorta con la capa de límites del INEI.</p><div class="grid"><article class="card" data-cat="curvas" data-search="curvas de nivel — lambayeque set shapefile completo de curva_de_nivel (.shp/.shx/.dbf/.prj).">
+      <div class="fmt">ZIP · SHP</div>
+      <h3>Curvas de nivel — LAMBAYEQUE</h3><p>Set shapefile completo de Curva_de_Nivel (.shp/.shx/.dbf/.prj).</p>
+      <div class="meta">31.7 MB · IGN vía IDEP ExtractPERU100K</div>
+      <a class="btn" href="https://github.com/wpolo2010/qgis-nivel-inicial-uss/releases/download/materiales-v1/lambayeque_curvas_de_nivel_100k.zip" download>⬇ Descargar</a></article>
+<article class="card" data-cat="curvas" data-search="curvas de nivel — piura set shapefile completo de curva_de_nivel (.shp/.shx/.dbf/.prj).">
+      <div class="fmt">ZIP · SHP</div>
+      <h3>Curvas de nivel — PIURA</h3><p>Set shapefile completo de Curva_de_Nivel (.shp/.shx/.dbf/.prj).</p>
+      <div class="meta">53.7 MB · IGN vía IDEP ExtractPERU100K</div>
+      <a class="btn" href="https://github.com/wpolo2010/qgis-nivel-inicial-uss/releases/download/materiales-v1/piura_curvas_de_nivel_100k.zip" download>⬇ Descargar</a></article>
+<article class="card" data-cat="curvas" data-search="curvas de nivel — cajamarca set shapefile completo de curva_de_nivel (.shp/.shx/.dbf/.prj). archivo pesado: la sierra cajamarquina tiene mucha curva.">
+      <div class="fmt">ZIP · SHP</div>
+      <h3>Curvas de nivel — CAJAMARCA</h3><p>Set shapefile completo de Curva_de_Nivel (.shp/.shx/.dbf/.prj). Archivo pesado: la sierra cajamarquina tiene mucha curva.</p>
+      <div class="meta">125.6 MB · IGN vía IDEP ExtractPERU100K</div>
+      <a class="btn" href="https://github.com/wpolo2010/qgis-nivel-inicial-uss/releases/download/materiales-v1/cajamarca_curvas_de_nivel_100k.zip" download>⬇ Descargar</a></article>
+</div></section><section id="estaciones"><h2>🌦️ Estaciones meteorológicas — SENAMHI</h2><p class="catdesc">Red de estaciones del catálogo oficial SENAMHI con coordenadas geográficas y UTM 17S calculadas. TXT delimitado por tabulador: importar con X = Este_UTM, Y = Norte_UTM, CRS EPSG:32717.</p><div class="grid"><article class="card" data-cat="estaciones" data-search="estaciones senamhi — lambayeque (16) principal: estación lambayeque e 620 773 · n 9 255 795 (epsg:32717).">
+      <div class="fmt">TXT</div>
+      <h3>Estaciones SENAMHI — LAMBAYEQUE (16)</h3><p>Principal: estación Lambayeque E 620 773 · N 9 255 795 (EPSG:32717).</p>
+      <div class="meta">2 KB · SENAMHI · Catálogo Atlas Climático</div>
+      <a class="btn" href="estaciones-meteorologicas/estaciones_lambayeque.txt" download>⬇ Descargar</a></article>
+<article class="card" data-cat="estaciones" data-search="estaciones senamhi — piura (32) principal: miraflores (castilla) e 544 328 · n 9 425 214 (epsg:32717).">
+      <div class="fmt">TXT</div>
+      <h3>Estaciones SENAMHI — PIURA (32)</h3><p>Principal: Miraflores (Castilla) E 544 328 · N 9 425 214 (EPSG:32717).</p>
+      <div class="meta">4 KB · SENAMHI · Catálogo Atlas Climático</div>
+      <a class="btn" href="estaciones-meteorologicas/estaciones_piura.txt" download>⬇ Descargar</a></article>
+<article class="card" data-cat="estaciones" data-search="estaciones senamhi — cajamarca (43) principal: augusto weberbauer e 776 877 · n 9 206 979 (epsg:32717).">
+      <div class="fmt">TXT</div>
+      <h3>Estaciones SENAMHI — CAJAMARCA (43)</h3><p>Principal: Augusto Weberbauer E 776 877 · N 9 206 979 (EPSG:32717).</p>
+      <div class="meta">5 KB · SENAMHI · Catálogo Atlas Climático</div>
+      <a class="btn" href="estaciones-meteorologicas/estaciones_cajamarca.txt" download>⬇ Descargar</a></article>
+</div></section><section id="mapas"><h2>🧭 Mapas temáticos y planos urbanos</h2><p class="catdesc">Cartografía regional de apoyo: mapas ZEE, red vial MTC y planos de desarrollo urbano/metropolitano.</p><div class="grid"><article class="card" data-cat="mapas" data-search="mapa vial base — lambayeque red vial departamental del ministerio de transportes y comunicaciones.">
+      <div class="fmt">PDF</div>
+      <h3>Mapa vial base — LAMBAYEQUE</h3><p>Red vial departamental del Ministerio de Transportes y Comunicaciones.</p>
+      <div class="meta">10.0 MB · MTC</div>
+      <a class="btn" href="mapas-lambayeque/mapa-vial-base-lambayeque-mtc.pdf" download>⬇ Descargar</a></article>
+<article class="card" data-cat="mapas" data-search="mapa hidrográfico e hidrológico — lambayeque (zee) zonificación ecológica y económica regional.">
+      <div class="fmt">PDF</div>
+      <h3>Mapa hidrográfico e hidrológico — LAMBAYEQUE (ZEE)</h3><p>Zonificación Ecológica y Económica regional.</p>
+      <div class="meta">4.8 MB · GORE Lambayeque · ZEE</div>
+      <a class="btn" href="mapas-lambayeque/mapa-hidrografico-e-hidrologico-lambayeque-zee.pdf" download>⬇ Descargar</a></article>
+<article class="card" data-cat="mapas" data-search="mapa político departamental — piura 1:310 000 límites político-administrativos del departamento.">
+      <div class="fmt">PDF</div>
+      <h3>Mapa político departamental — PIURA 1:310 000</h3><p>Límites político-administrativos del departamento.</p>
+      <div class="meta">1.7 MB · Cartografía regional</div>
+      <a class="btn" href="mapas-piura/mapa-politico-departamental-piura-1-310000.pdf" download>⬇ Descargar</a></article>
+<article class="card" data-cat="mapas" data-search="mapa político-administrativo — cajamarca (zee) zonificación ecológica y económica regional.">
+      <div class="fmt">PDF</div>
+      <h3>Mapa político-administrativo — CAJAMARCA (ZEE)</h3><p>Zonificación Ecológica y Económica regional.</p>
+      <div class="meta">7.6 MB · GORE Cajamarca · ZEE</div>
+      <a class="btn" href="mapas-cajamarca/mapa-politico-administrativo-cajamarca-zee.pdf" download>⬇ Descargar</a></article>
+<article class="card" data-cat="mapas" data-search="mapa hidrológico — cajamarca 1:250 000 (zee) red hídrica y cuencas del departamento.">
+      <div class="fmt">PDF</div>
+      <h3>Mapa hidrológico — CAJAMARCA 1:250 000 (ZEE)</h3><p>Red hídrica y cuencas del departamento.</p>
+      <div class="meta">11.2 MB · GORE Cajamarca · ZEE</div>
+      <a class="btn" href="mapas-cajamarca/mapa-hidrologico-cajamarca-zee-1-250000.pdf" download>⬇ Descargar</a></article>
+<article class="card" data-cat="mapas" data-search="zonificación metropolitana — chiclayo (pdm 2022–2042) plan de desarrollo metropolitano de chiclayo: zonificación y usos de suelo.">
+      <div class="fmt">PDF</div>
+      <h3>Zonificación metropolitana — CHICLAYO (PDM 2022–2042)</h3><p>Plan de Desarrollo Metropolitano de Chiclayo: zonificación y usos de suelo.</p>
+      <div class="meta">6.8 MB · PDM Chiclayo</div>
+      <a class="btn" href="planos-urbanos-manzanas/zonificacion-metropolitana-chiclayo-pdm-2022-2042.pdf" download>⬇ Descargar</a></article>
+<article class="card" data-cat="mapas" data-search="plano básico de manzanas — piura (pdu 2032) plan de desarrollo urbano de piura: trama y manzanas.">
+      <div class="fmt">PDF</div>
+      <h3>Plano básico de manzanas — PIURA (PDU 2032)</h3><p>Plan de Desarrollo Urbano de Piura: trama y manzanas.</p>
+      <div class="meta">9.0 MB · PDU Piura</div>
+      <a class="btn" href="planos-urbanos-manzanas/plano-basico-manzanas-piura-pdu-2032.pdf" download>⬇ Descargar</a></article>
+<article class="card" data-cat="mapas" data-search="zonificación y uso de suelo — cajamarca (pdu 2016–2026) plan de desarrollo urbano de cajamarca.">
+      <div class="fmt">PDF</div>
+      <h3>Zonificación y uso de suelo — CAJAMARCA (PDU 2016–2026)</h3><p>Plan de Desarrollo Urbano de Cajamarca.</p>
+      <div class="meta">3.7 MB · PDU Cajamarca</div>
+      <a class="btn" href="planos-urbanos-manzanas/zonificacion-uso-suelo-cajamarca-pdu-2016-2026.pdf" download>⬇ Descargar</a></article>
+</div></section><section id="practica"><h2>🎯 Datos y documentos de práctica</h2><p class="catdesc">Datos listos para las prácticas y documentos del curso.</p><div class="grid"><article class="card" data-cat="practica" data-search="distritos de la provincia de chiclayo (geopackage) 20 distritos ya en epsg:32717 — respaldo oficial de la práctica de la clase 2 (fuente inei).">
+      <div class="fmt">GPKG</div>
+      <h3>Distritos de la provincia de Chiclayo (GeoPackage)</h3><p>20 distritos ya en EPSG:32717 — respaldo oficial de la práctica de la Clase 2 (fuente INEI).</p>
+      <div class="meta">256 KB · INEI · preparado para el curso</div>
+      <a class="btn" href="clase-2-respaldo/distritos-chiclayo.gpkg" download>⬇ Descargar</a></article>
+<article class="card" data-cat="practica" data-search="ejercicio de georreferenciación — guion completo tablas de puntos de control (gcp) de los ejercicios a/b y a′/b′, flujo en qgis y problemas típicos.">
+      <div class="fmt">MD</div>
+      <h3>Ejercicio de georreferenciación — guion completo</h3><p>Tablas de puntos de control (GCP) de los ejercicios A/B y A′/B′, flujo en QGIS y problemas típicos.</p>
+      <div class="meta">8 KB · Material del curso USS</div>
+      <a class="btn" href="documentos/ejercicio-georreferenciacion-cartas-ign.md" download>⬇ Descargar</a></article>
+<article class="card" data-cat="practica" data-search="bienvenida e instalación de qgis 3.44 ltr instrucciones de instalación y reglas del curso (versión única para todos).">
+      <div class="fmt">MD</div>
+      <h3>Bienvenida e instalación de QGIS 3.44 LTR</h3><p>Instrucciones de instalación y reglas del curso (versión única para todos).</p>
+      <div class="meta">3 KB · Material del curso USS</div>
+      <a class="btn" href="documentos/mensaje-bienvenida-e-instalacion.md" download>⬇ Descargar</a></article>
+<article class="card" data-cat="practica" data-search="guía fin de semana 1 — clases 1 y 2 fundamentos, interfaz, datos y sistemas de coordenadas.">
+      <div class="fmt">MD</div>
+      <h3>Guía fin de semana 1 — Clases 1 y 2</h3><p>Fundamentos, interfaz, datos y sistemas de coordenadas.</p>
+      <div class="meta">4 KB · Material del curso USS</div>
+      <a class="btn" href="documentos/00-guia-fin-de-semana-clases-1-y-2.md" download>⬇ Descargar</a></article>
+<article class="card" data-cat="practica" data-search="guía fin de semana 2 — clases 3 y 4 crear y editar datos; georreferenciación.">
+      <div class="fmt">MD</div>
+      <h3>Guía fin de semana 2 — Clases 3 y 4</h3><p>Crear y editar datos; georreferenciación.</p>
+      <div class="meta">3 KB · Material del curso USS</div>
+      <a class="btn" href="documentos/01-guia-segundo-fin-de-semana-clases-3-y-4.md" download>⬇ Descargar</a></article>
+<article class="card" data-cat="practica" data-search="guía fin de semana 3 — clases 5 y 6 geoprocesamiento básico.">
+      <div class="fmt">MD</div>
+      <h3>Guía fin de semana 3 — Clases 5 y 6</h3><p>Geoprocesamiento básico.</p>
+      <div class="meta">4 KB · Material del curso USS</div>
+      <a class="btn" href="documentos/02-guia-tercer-fin-de-semana-clases-5-y-6.md" download>⬇ Descargar</a></article>
+<article class="card" data-cat="practica" data-search="tarjeta de rescate — datos clase 2 qué hacer si la descarga del inei no abre (archivo .rar / epsg:4326) y cuál es el respaldo.">
+      <div class="fmt">MD</div>
+      <h3>Tarjeta de rescate — datos Clase 2</h3><p>Qué hacer si la descarga del INEI no abre (archivo .rar / EPSG:4326) y cuál es el respaldo.</p>
+      <div class="meta">3 KB · Material del curso USS</div>
+      <a class="btn" href="documentos/clase-2-tarjeta-rescate-datos.md" download>⬇ Descargar</a></article>
+</div></section></main>
+<footer>Datos oficiales del Perú: IGN / IDEP · SENAMHI · INEI · MINAM · MTC · Gobiernos Regionales (ZEE) y municipalidades (PDU/PDM).<br>Material recopilado con fines exclusivamente académicos para el seminario. Verifica siempre la fuente original para usos profesionales.</footer>
+<script>const q=document.getElementById('q');let f='all';
+function apply(){const t=q.value.toLowerCase();document.querySelectorAll('.card').forEach(c=>{const ok=(f==='all'||c.dataset.cat===f)&&c.dataset.search.includes(t);c.classList.toggle('hidden',!ok)});
+document.querySelectorAll('section').forEach(s=>{const any=[...s.querySelectorAll('.card')].some(c=>!c.classList.contains('hidden'));s.classList.toggle('hidden',!any)})}
+q.addEventListener('input',apply);document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');f=b.dataset.f;apply()}));</script>
+</body></html>
